@@ -4,9 +4,9 @@ import { defineTokens } from "@pandacss/dev";
 // Primary color: #00677f
 
 export const colors = defineTokens.colors({
-  white: { value: "#ffffff" },
-  black: { value: "#000000" },
   palette: {
+    white: { value: "#ffffff" },
+    black: { value: "#000000" },
     primary: {
       10: { value: "#001f28" },
       20: { value: "#003543" },
