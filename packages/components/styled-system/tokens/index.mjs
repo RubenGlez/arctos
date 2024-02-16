@@ -247,34 +247,6 @@ const tokens = {
     "value": "8rem",
     "variable": "var(--font-sizes-9xl)"
   },
-  "shadows.xs": {
-    "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
-    "variable": "var(--shadows-xs)"
-  },
-  "shadows.sm": {
-    "value": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
-    "variable": "var(--shadows-sm)"
-  },
-  "shadows.md": {
-    "value": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
-    "variable": "var(--shadows-md)"
-  },
-  "shadows.lg": {
-    "value": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
-    "variable": "var(--shadows-lg)"
-  },
-  "shadows.xl": {
-    "value": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
-    "variable": "var(--shadows-xl)"
-  },
-  "shadows.2xl": {
-    "value": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
-    "variable": "var(--shadows-2xl)"
-  },
-  "shadows.inner": {
-    "value": "inset 0 2px 4px 0 rgb(0 0 0 / 0.05)",
-    "variable": "var(--shadows-inner)"
-  },
   "blurs.sm": {
     "value": "4px",
     "variable": "var(--blurs-sm)"
@@ -2023,6 +1995,54 @@ const tokens = {
     "value": "var(--font-roboto), sans-serif",
     "variable": "var(--fonts-roboto)"
   },
+  "shadows.xs": {
+    "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+    "variable": "var(--shadows-xs)"
+  },
+  "shadows.sm": {
+    "value": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+    "variable": "var(--shadows-sm)"
+  },
+  "shadows.md": {
+    "value": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+    "variable": "var(--shadows-md)"
+  },
+  "shadows.lg": {
+    "value": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+    "variable": "var(--shadows-lg)"
+  },
+  "shadows.xl": {
+    "value": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+    "variable": "var(--shadows-xl)"
+  },
+  "shadows.2xl": {
+    "value": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
+    "variable": "var(--shadows-2xl)"
+  },
+  "shadows.inner": {
+    "value": "inset 0 2px 4px 0 rgb(0 0 0 / 0.05)",
+    "variable": "var(--shadows-inner)"
+  },
+  "shadows.elevation1": {
+    "value": "var(--shadows-1)",
+    "variable": "var(--shadows-elevation1)"
+  },
+  "shadows.elevation2": {
+    "value": "var(--shadows-2)",
+    "variable": "var(--shadows-elevation2)"
+  },
+  "shadows.elevation3": {
+    "value": "var(--shadows-3)",
+    "variable": "var(--shadows-elevation3)"
+  },
+  "shadows.elevation4": {
+    "value": "var(--shadows-4)",
+    "variable": "var(--shadows-elevation4)"
+  },
+  "shadows.elevation5": {
+    "value": "var(--shadows-5)",
+    "variable": "var(--shadows-elevation5)"
+  },
   "breakpoints.sm": {
     "value": "640px",
     "variable": "var(--breakpoints-sm)"
@@ -2162,6 +2182,26 @@ const tokens = {
   "colors.scrim": {
     "value": "var(--colors-scrim)",
     "variable": "var(--colors-scrim)"
+  },
+  "shadows.1": {
+    "value": "var(--shadows-1)",
+    "variable": "var(--shadows-1)"
+  },
+  "shadows.2": {
+    "value": "var(--shadows-2)",
+    "variable": "var(--shadows-2)"
+  },
+  "shadows.3": {
+    "value": "var(--shadows-3)",
+    "variable": "var(--shadows-3)"
+  },
+  "shadows.4": {
+    "value": "var(--shadows-4)",
+    "variable": "var(--shadows-4)"
+  },
+  "shadows.5": {
+    "value": "var(--shadows-5)",
+    "variable": "var(--shadows-5)"
   },
   "spacing.-1": {
     "value": "calc(var(--spacing-1) * -1)",

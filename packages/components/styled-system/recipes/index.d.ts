@@ -1,2 +1,4 @@
 /* eslint-disable */
-export * from './example';
+export * from './typography';
+export * from './badge';
+export * from './button';

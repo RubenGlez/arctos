@@ -1,12 +1,12 @@
 import { css } from "../styled-system/css";
+import Button from "./components/Button";
 
-function App() {
+export default function App() {
   return (
-    <div className={css({ fontSize: "2xl", fontWeight: "bold" })}>
-      Hello 🐼!
-      <span className={css({ textStyle: "" })}>alaaaa</span>
+    <div className={css({ padding: "40px" })}>
+      <Button icon="plus" disabled>
+        Label
+      </Button>
     </div>
   );
 }
-
-export default App;
