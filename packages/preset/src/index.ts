@@ -4,15 +4,21 @@ import { tokens } from "./tokens";
 import { textStyles } from "./text-styles";
 import { semanticTokens } from "./semantic-tokens";
 import { globalCss } from "./global-css";
+import { recipes } from "./recipes";
+import { utilities } from "./utilities";
 
-export default definePreset({
+export const arctosPreset = definePreset({
   presets: [pandaPreset],
   globalCss,
+  utilities,
   theme: {
     extend: {
       tokens,
       semanticTokens,
       textStyles,
+      recipes,
     },
   },
 });
+
+export default arctosPreset;

@@ -1,18 +1,9 @@
-import { defineRecipe } from "@pandacss/dev";
+import * as typography from "./typography";
+import * as badge from "./badge";
+import * as button from "./button";
 
-export const buttonRecipe = defineRecipe({
-  className: "button",
-  description: "The styles for the Button component",
-  base: {
-    display: "flex",
-  },
-  variants: {
-    visual: {
-      funky: { bg: "red.200", color: "white" },
-      edgy: { border: "1px solid {colors.red.500}" },
-    },
-  },
-  defaultVariants: {
-    visual: "funky",
-  },
-});
+export const recipes = {
+  ...typography,
+  ...badge,
+  ...button,
+};
