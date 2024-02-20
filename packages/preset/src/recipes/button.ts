@@ -1,59 +1,173 @@
-import { defineRecipe } from "@pandacss/dev";
+import { defineSlotRecipe } from "@pandacss/dev";
 
-export const button = defineRecipe({
-  staticCss: [{ hasIcon: ["*"], variants: ["*"] }],
+export const button = defineSlotRecipe({
+  staticCss: [{ hasIcon: ["*"], variant: ["*"] }],
+  slots: ["root", "stateLayer"],
   className: "button",
   description: "Button styles",
   base: {
-    appearance: "none",
-    display: "inline-flex",
-    height: "40px",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "8px",
-    borderRadius: "full",
-    paddingLeft: "24px",
-    paddingRight: "24px",
-    cursor: "pointer",
-    color: "onPrimary",
-    outline: "none",
-    transitionProperty: "color, background-color, box-shadow",
-    transitionDuration: "150ms",
-    transitionTimingFunction: "linear",
+    root: {
+      appearance: "none",
+      display: "inline-flex",
+      height: "40px",
+      borderRadius: "full",
+      cursor: "pointer",
+      outline: "none",
+      transitionProperty: "background-color, border, box-shadow",
+      transitionDuration: "150ms",
+      transitionTimingFunction: "linear",
+      _disabled: {
+        pointerEvents: "none",
+      },
+    },
+    stateLayer: {
+      borderRadius: "full",
+      display: "inline-flex",
+      justifyContent: "center",
+      alignItems: "center",
+      gap: "8px",
+      height: "100%",
+      width: "100%",
+      paddingLeft: "24px",
+      paddingRight: "24px",
+      transitionProperty: "background-color",
+      transitionDuration: "150ms",
+      transitionTimingFunction: "linear",
+    },
   },
   variants: {
     variant: {
       filled: {
-        backgroundColor: "primary",
-        _hover: {
-          boxShadow: "{shadows.1}",
-          backgroundColor: "primary/92",
+        root: {
+          color: "onPrimary",
+          backgroundColor: "primary",
+          _hover: {
+            boxShadow: "1",
+          },
+          _disabled: {
+            backgroundColor: "onSurface/12",
+            color: "onSurface/38",
+          },
         },
-        _focus: {
-          backgroundColor: "primary/88",
-        },
-        _active: {
-          backgroundColor: "primary/88",
-        },
-        _disabled: {
-          backgroundColor: "onSurface/12",
-          color: "onSurface/38",
-          pointerEvents: "none",
+        stateLayer: {
+          _groupHover: {
+            backgroundColor: "onPrimary/8",
+          },
+          _groupFocus: {
+            backgroundColor: "onPrimary/12",
+          },
+          _groupActive: {
+            backgroundColor: "onPrimary/12",
+          },
+          _groupDisabled: {
+            backgroundColor: "onSurface/12",
+          },
         },
       },
       outlined: {
-        border: "1px solid black",
+        root: {
+          color: "primary",
+          borderWidth: "1px",
+          borderStyle: "solid",
+          borderColor: "outline",
+          _disabled: {
+            color: "onSurface/38",
+            borderColor: "onSurface/12",
+          },
+        },
+        stateLayer: {
+          _groupHover: {
+            backgroundColor: "primary/8",
+          },
+          _groupFocus: {
+            backgroundColor: "primary/12",
+          },
+          _groupActive: {
+            backgroundColor: "primary/12",
+          },
+        },
+      },
+      text: {
+        root: {
+          color: "primary",
+          _disabled: {
+            color: "onSurface/38",
+          },
+        },
+        stateLayer: {
+          _groupHover: {
+            backgroundColor: "primary/8",
+          },
+          _groupFocus: {
+            backgroundColor: "primary/12",
+          },
+          _groupActive: {
+            backgroundColor: "primary/12",
+          },
+        },
       },
       elevated: {
-        boxShadow: "{shadows.1}",
+        root: {
+          boxShadow: "1",
+          color: "primary",
+          backgroundColor: "surfaceContainerLow",
+          _hover: {
+            boxShadow: "2",
+          },
+          _focus: {
+            boxShadow: "1",
+          },
+          _disabled: {
+            color: "onSurface/38",
+            boxShadow: "none",
+          },
+        },
+        stateLayer: {
+          _groupHover: {
+            backgroundColor: "primary/8",
+          },
+          _groupFocus: {
+            backgroundColor: "primary/12",
+          },
+          _groupActive: {
+            backgroundColor: "primary/12",
+          },
+          _groupDisabled: {
+            backgroundColor: "onSurface/12",
+          },
+        },
       },
       tonal: {
-        backgroundColor: "secondaryContainer",
+        root: {
+          backgroundColor: "secondaryContainer",
+          _hover: {
+            boxShadow: "1",
+          },
+          _disabled: {
+            color: "onSurface/38",
+          },
+        },
+        stateLayer: {
+          _groupHover: {
+            backgroundColor: "onSecondaryContainer/8",
+          },
+          _groupFocus: {
+            backgroundColor: "onSecondaryContainer/12",
+          },
+          _groupActive: {
+            backgroundColor: "onSecondaryContainer/12",
+          },
+          _groupDisabled: {
+            backgroundColor: "onSurface/12",
+          },
+        },
       },
     },
     hasIcon: {
       true: {
-        paddingLeft: "16px",
+        stateLayer: {
+          paddingLeft: "16px",
+        },
       },
     },
   },

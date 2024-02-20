@@ -15,12 +15,15 @@ const Button = forwardRef(
     { children, icon, variant = "filled", className, ...rest }: ButtonProps,
     ref: ForwardedRef<HTMLButtonElement>
   ) => {
-    const cls = cx(button({ variant, hasIcon: Boolean(icon) }), className);
+    const { root, stateLayer } = button({ variant, hasIcon: Boolean(icon) });
+    const cls = cx(root, "group", className);
 
     return (
       <button {...rest} ref={ref} className={cls}>
-        {icon && <Icon name={icon} />}
-        <Typography size={"labelLarge"}>{children}</Typography>
+        <div className={stateLayer}>
+          {icon && <Icon name={icon} />}
+          <Typography size={"labelLarge"}>{children}</Typography>
+        </div>
       </button>
     );
   }
