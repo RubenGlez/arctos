@@ -1,6 +1,7 @@
 import { defineRecipe } from "@pandacss/dev";
 
 export const badge = defineRecipe({
+  staticCss: [{ size: ["*"] }],
   className: "badge",
   description: "Badge styles",
   base: {
